@@ -1,0 +1,12 @@
+.home {
+    background-color: #282c34;
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.title {
+    font-size: 50px;
+    color: turquoise;
+}
