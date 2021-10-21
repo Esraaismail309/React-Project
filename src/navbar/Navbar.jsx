@@ -18,6 +18,9 @@ const Navigation = () => {
                         <li class="nav-item">
                             <Link to="/Counter" class="nav-link" >Counter</Link>
                         </li>
+                        <li class="nav-item">
+                            <Link to="/Todo" class="nav-link" >ToDo</Link>
+                        </li>
 
                       
                     </ul>
