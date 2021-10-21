@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addToDoAction, deleteToDoAction } from "./redux/todo";
+import { addToDoAction, deleteToDoAction } from "./../redux/todo";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 function ToDo() {
