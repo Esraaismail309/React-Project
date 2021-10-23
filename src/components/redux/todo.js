@@ -1,5 +1,3 @@
-import { createStore } from "redux"
-
 //Actions 
 const ADD_TODO = "ADD_TODO"
 
@@ -27,7 +25,8 @@ const initialState = {
 }
 
 //Reducer
-const toDoReducer = (state = initialState, action) => {
+export const toDoReducer = (state = initialState, action) => {
+    // console.log(state);
     switch (action.type) {
         case ADD_TODO:
             return {...state, todos: [...state.todos, action.payload] }
@@ -38,6 +37,3 @@ const toDoReducer = (state = initialState, action) => {
 
     }
 }
-
-//Store
-export const store = createStore(toDoReducer)

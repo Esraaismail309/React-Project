@@ -3,7 +3,7 @@ import { addToDoAction, deleteToDoAction } from "./../redux/todo";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 function ToDo() {
-    const toDoState = useSelector(state => state.todos)
+    const toDoState = useSelector(state =>state.toDoReducer.todos)
     const dispatch = useDispatch()
 
     const addTodo = (task) => {

@@ -7,6 +7,9 @@ import Shop from './components/shop/Shop';
 import Navigation from './navbar/Navbar';
 import Product from './components/shop/product'
 import ToDo from './components/todo/Todo';
+import Login from './components/login/Login';
+import Register from './components/login/Register';
+//style
 import './App.css';
 
 
@@ -24,6 +27,10 @@ function App() {
           <Route component={Shop} path="/shop" exact/>
           <Route component={Product} path="/shop/:id"/>
           <Route component={ToDo} path="/todo"/>
+          <Route component={Login} path="/login"/>
+          <Route component={Register} path="/register"/>
+
+
 
         </Switch>
       </BrowserRouter>
