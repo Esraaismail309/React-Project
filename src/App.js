@@ -1,10 +1,10 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 //components
+import Navigation from './components/navbar/Navbar';
 import Counter from './components/counter/counter'
 import Home from './components/home/Home';
 import Shop from './components/shop/Shop';
-import Navigation from './navbar/Navbar';
 import Product from './components/shop/product'
 import ToDo from './components/todo/Todo';
 import Login from './components/login/Login';

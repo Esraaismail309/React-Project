@@ -1,4 +1,3 @@
-import React from "react";
 import { Field } from "formik";
 import FormikError from "./FromikErrors";
 
@@ -8,16 +7,16 @@ const FormikSelect = ({ name }) => {
         <Field name={name}>
             {(FormikSelect) => {
                 return (
-                    <>
-                        <Field name={name} placeholder="Gender" 
-                           {...FormikSelect.field}
-                            defaultChecked={FormikSelect.field.value} />
-                        <Field as="select" name={name}>
+                    
+                     <div className="form-group">
+                     <div className="d-block mt-2 ms-1 h6">Gender</div>
+                        <select as="select" name={name} className=" btn border p-1 mt-1 bg-light">
                             <option value="female">female</option>
                             <option value="male">male</option>
-                        </Field>
+                        </select>
                         <FormikError name={name} />
-                    </>
+                     </div>
+                    
                 );
             }}
         </Field>

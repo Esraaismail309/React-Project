@@ -22,15 +22,16 @@ const Login = () => {
         validationSchema,
     })
     return (
-        <div className="w-75 m-auto">
-            <h2 className="text-center mt-4">Log In Form</h2>
-            <form onSubmit={formik.handleSubmit} className="w-75 m-auto border mt-4 ">
-                <div style={{ padding: 20 }}>
+       <div className="bg-light vh-100">
+            <div className="w-50  m-auto">
+            <h2 className="text-center p-4">Log In Form</h2>
+            <form onSubmit={formik.handleSubmit} className="w-75 m-auto border bg-white mt-4 shadow">
+                <div className="p-4">
                     <div className="form-group">
                         <label className="m-3 d-block" htmlFor="email">
                             email
                         </label>
-                        <input className="form-control" type="email" id="email"
+                        <input className="form-control bg-light" type="email" id="email"
                             name="email"
                             {...formik.getFieldProps("email")}
 
@@ -44,7 +45,7 @@ const Login = () => {
                         <label className="m-3 d-block" htmlFor="password" >
                             password
                         </label>
-                        <input className="form-control" type="password" id="password"
+                        <input className="form-control bg-light" type="password" id="password"
                             name="password"
                             {...formik.getFieldProps("password")}
                         />
@@ -52,19 +53,19 @@ const Login = () => {
                             <div className="alert alert-danger mt-2 p-2">{formik.errors.password}</div>
                         )}
                     </div>
-
-                    <label htmlFor="rememberMe" className="me-3 my-3">
-                        remember me
-                    </label>
-                    {/* <pre>{JSON.stringify(formik, null, 4)}</pre> */}
-                    <input type="checkbox" id="rememberMe" name="rememberMe"
+                    <input className="me-3 mt-3" type="checkbox" id="rememberMe" name="rememberMe"
                         onChange={formik.handleChange}
                         defaultChecked={formik.values.rememberMe} />
-                    <button className="d-block btn btn-primary" >Login</button>
+                    <label htmlFor="rememberMe" className=" my-3">
+                        remember me
+                    </label>
+                
+                    <button className="d-block btn btn-success w-75 rounded-pill m-auto my-3 " >Login</button>
                 </div>
             </form>
         </div>
 
+       </div>
     )
 }
 

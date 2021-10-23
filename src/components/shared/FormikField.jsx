@@ -8,18 +8,19 @@ const FormikField = ({ name, type, label }) => {
         <Field name={name}>
             {(formikField) => {
                 return (
-                    <>
-                        <label className="h6 d-block" htmlFor={name} >
+                    <div className="form-group">
+                        <label className="h6 d-block my-2" htmlFor={name} >
                             {label}
                         </label>
                         <input
+                        className="form-control bg-light"
                             type={type}
                             id={name}
                             {...formikField.field}
                             defaultChecked={formikField.field.value}
                         />
                         <FormikError name={name} />
-                    </>
+                    </div>
                 );
             }}
         </Field>

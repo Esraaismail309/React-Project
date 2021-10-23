@@ -5,7 +5,7 @@ const TodoList = ({ todos, deleteTodo }) => {
         todos && todos.length > 0 ? (
             todos.map((todo, i) => {
                 return (
-                    <ul key={i} className="list-unstyled">
+                    <ul key={i} className="list-unstyled w-75 m-auto mt-4">
                         <li className="border shadow">
                             <div className="p-4 d-flex jusify-content-between align-items-center">
                                 <div className="col-8 text-start">

@@ -1,34 +1,34 @@
 
 import React from 'react';
-import { Field, FieldArray } from 'formik';
+import { FieldArray } from 'formik';
 
 export const FormArray = ({name}) => (
     <div>
-        <h4>your hoppies</h4>
+        <h6>Hobbies</h6>
         <FieldArray
             name={name}
             render={arrayHelpers => (
                 <div>
-                    { arrayHelpers.form.values["hoppies"].length > 0 ? (
-                        arrayHelpers.form.values["hoppies"].map((hoppy, index) => (
-                            <div key={index}>
-                                <Field name={`hoppies.${index}`} />
-                                <button
-                                    type="button"
-                                    onClick={() => arrayHelpers.remove(index)}
-                                >
+                    { arrayHelpers.form.values["hobbies"].length > 0 ? (
+                        arrayHelpers.form.values["hobbies"].map((hobby, index) => (
+                            <div key={index} className="d-flex my-2">
+                                <input className="form-control w-25" name={`hobbies.${index}`} />
+                              <div className="">
+                                    <button className="btn btn-danger px-3" type="button" onClick={() => arrayHelpers.remove(index)}
+>
                                     -
                                 </button>
-                                <button
+                                <button className="btn btn-primary  ms-1 px-3"
                                     type="button"
                                     onClick={() => arrayHelpers.insert(index, '')}
                                 >
                                     +
                                 </button>
+                              </div>
                             </div>
                         ))
                     ) : (
-                        <button type="button" onClick={() => arrayHelpers.push('')}>
+                        <button className="btn btn-dark mb-3" type="button" onClick={() => arrayHelpers.push('')}>
                             Add your hoppy
                         </button>
                     )}

@@ -17,7 +17,8 @@ function Shop() {
         <div>
             {products
                 ?
-                (<div className="container mt-5 p-5">
+                (<div className="container mt-3 p-5">
+                    <h2 className="text-center h1 mb-5">Shopping Page</h2>
                     <section className="d-flex flex-wrap justify-content-center ">
                         {products.map(product => {
                             return (
