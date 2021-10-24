@@ -7,16 +7,19 @@ const FormikSelect = ({ name }) => {
         <Field name={name}>
             {(FormikSelect) => {
                 return (
-                    
-                     <div className="form-group">
-                     <div className="d-block mt-2 ms-1 h6">Gender</div>
-                        <select as="select" name={name} className=" btn border p-1 mt-1 bg-light">
+
+                    <div className="form-group">
+                        <label className="d-block mt-2 ms-1 h6">Gender</label>
+                        <select as="select" name={name} className=" btn border p-1 mt-1 bg-light"
+                            {...FormikSelect.field}
+                            defaultChecked={FormikSelect.field.value}>
+                            <option >Gender</option>
                             <option value="female">female</option>
                             <option value="male">male</option>
                         </select>
                         <FormikError name={name} />
-                     </div>
-                    
+                    </div>
+
                 );
             }}
         </Field>
